@@ -1,0 +1,96 @@
+.form {
+  max-width: 400px;
+
+  &__item {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin-bottom: 10px;
+    position: relative;
+
+    &-required {
+      color: red;
+      //display: block;
+    }
+
+    &-feedback {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      padding: 5px;
+      background: $valid;
+      color: $white;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      border: 1px solid $valid;
+      border-radius: 5px;
+      display: none;
+
+      ._isInvalid > & {
+        display: block;
+      }
+    }
+
+    //&-valid {
+    //  display: none;
+    //}
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: .5rem;
+    //padding: 0 10px;
+  }
+
+  &__input {
+    max-width: 400px;
+    position: relative;
+
+    input {
+      height: 40px;
+      width: 100%;
+      padding: 0 10px;
+      font-size: 1.6rem;
+      line-height: 2.1rem;
+      border: 1px solid black;
+      border-radius: 6px;
+
+    }
+
+    &._isValid {
+      &::after {
+        content: '\2713';
+        position: absolute;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
+        background: $valid;
+        color: $white;
+        border-radius: 100%;
+      }
+
+      input {
+        border: 2px solid $valid;
+      }
+    }
+
+    ._isInvalid & {
+      input {
+        border: 2px solid $inValid;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}

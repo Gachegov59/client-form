@@ -1,0 +1,11 @@
+.blocks {
+  display: flex;
+  &__item {
+    &._50 {
+      flex:1 1 50%;
+    }
+    &._30 {
+      flex:1 1 30%;
+    }
+  }
+}

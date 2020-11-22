@@ -1,0 +1,35 @@
+@import "constans.scss";
+@import "mixin.scss";
+@import "block";
+//ui
+@import "ui/form";
+@import "ui/btn";
+
+//base
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $fontRoboto;
+  font-size: $base-font-size;
+  color: black;
+  height: 100%;
+  @include tablet {
+    font-size: 12px;
+  }
+}
+
+input {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+//body, #app {
+//  height: 100%;
+//}
+.container {
+   padding: 0 15px
+ }

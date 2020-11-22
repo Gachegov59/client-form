@@ -1,0 +1,22 @@
+.btn {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background: $white;
+  color: $black;
+  transition: $transition;
+  cursor: pointer;
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+  &._border {
+    border: 1px solid black;
+    &._r6{
+      border-radius: 6px;
+    }
+  }
+  &._color {
+    background: $white;
+    color: $black;
+  }
+}
