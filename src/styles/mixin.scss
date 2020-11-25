@@ -45,6 +45,11 @@
     @content;
   }
 }
+@mixin phone-min {
+  @media only screen and (max-width: #{$smart-width - 1px}) {
+    @content;
+  }
+}
 
 //@mixin phone-min {
 //  @media only screen and (min-width: #{$tablet-width}) {

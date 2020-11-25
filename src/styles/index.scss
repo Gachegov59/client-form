@@ -1,9 +1,11 @@
 @import "constans.scss";
 @import "mixin.scss";
 @import "block";
+@import "message";
 //ui
 @import "ui/form";
 @import "ui/btn";
+@import "ui/scroll";
 
 //base
 *, *:before, *:after {
@@ -15,9 +17,9 @@ html {
   font-size: $base-font-size;
   color: black;
   height: 100%;
-  @include tablet {
-    font-size: 12px;
-  }
+  //@include tablet {
+  //  font-size: 12px;
+  //}
 }
 
 input {
@@ -26,6 +28,14 @@ input {
     -webkit-appearance: none;
     margin: 0;
   }
+  &:focus {
+   outline: none;
+  }
+}
+select {
+  &:focus {
+    outline: none;
+  }
 }
 //body, #app {
 //  height: 100%;
@@ -33,3 +43,10 @@ input {
 .container {
    padding: 0 15px
  }
+
+.custom-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 350px;
+  height: 120vh;
+}
